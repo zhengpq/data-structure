@@ -1,2 +1,3 @@
 # data-structure
 data-structure width javascript
+这是一个用于学习数据结构和算法的项目，这个项目将用JavaScript来实现常见的数据结构同时实现一些常见的算法
