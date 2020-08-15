@@ -29,10 +29,16 @@ class LinkedList {
     }
     return result
   }
-  get(index) {
-
+  size() {
+    let size = 0
+    const current = this.header
+    
   }
-  size() {}
+  get(index) {
+  }
   insert(index, data) {}
   remove() {}
 }
+
+const list1 = new LinkedList()
+list1.add('1')
