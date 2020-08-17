@@ -9,6 +9,7 @@ class BinarySearchTreeNode {
 class BinarySearchTree {
   constructor() {
     this.root = null
+    this.length = 0
   }
   insert(data) {
     const newTreeNode = new BinarySearchTreeNode(data)
@@ -37,6 +38,7 @@ class BinarySearchTree {
         }
       }
     }
+    ++ this.length
   }
   has(data) {
     let current = this.root
@@ -53,8 +55,34 @@ class BinarySearchTree {
     }
     return result
   }
-  delete() {}
-  size() {}
+  findMin() {
+    if (this.size() === 0) {
+      console.error('the tree is empty')
+      return
+    }
+    let current = this.root
+    while (current.leftTree !== null) {
+      current = current.leftTree
+    }
+    return current.data
+  }
+  findMax() {
+    if (this.size() === 0) {
+      console.error('the tree is empty')
+      return
+    }
+    let current = this.root
+    while (current.rightTree !== null) {
+      current = current.rightTree
+    }
+    return current.data
+  }
+  delete() {
+    
+  }
+  size() {
+    return this.length
+  }
 }
 
 const tree1 = new BinarySearchTree()
@@ -63,3 +91,5 @@ tree1.insert(3)
 tree1.insert(2)
 tree1.insert(1)
 console.log('pakizheng', tree1.has(8))
+console.log('pakizheng', tree1.findMin())
+console.log('pakizheng', tree1.findMax())
