@@ -83,6 +83,10 @@ class BinarySearchTree {
   size() {
     return this.length
   }
+  // 遍历二叉树
+  traverse() {}
+  // 将树结构用字符串表示出来
+  toString() {}
 }
 
 const tree1 = new BinarySearchTree()

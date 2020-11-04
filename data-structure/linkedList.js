@@ -99,6 +99,19 @@ class LinkedList {
     const previousNode = this.findPrevious(dataIndex)
     previousNode.next = current.next
   }
+  reserve() {
+    let current = this.header
+    let previous = null
+    let next = null
+    while (current.next !== null) {
+      next = current.next
+      current.next = previous
+      previous = current
+      current = next
+    }
+    this.header = current
+    current.next = previous
+  }
   valueToArray() {
     const value = []
     let current = this.header
@@ -114,7 +127,8 @@ const list1 = new LinkedList()
 list1.add(1)
 list1.add(2)
 list1.add(3)
-list1.insert(1, 4)
 console.log(list1.valueToArray())
-list1.remove(2)
+list1.reserve()
+console.log(list1.valueToArray())
+list1.reserve()
 console.log(list1.valueToArray())
