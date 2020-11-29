@@ -124,11 +124,15 @@ class LinkedList {
 }
 
 const list1 = new LinkedList()
+list1.add(3)
 list1.add(1)
 list1.add(2)
-list1.add(3)
 console.log(list1.valueToArray())
 list1.reserve()
 console.log(list1.valueToArray())
 list1.reserve()
 console.log(list1.valueToArray())
+
+const fn = (N) => {
+  
+}
